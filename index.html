@@ -5,14 +5,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coffee House</title>
   </head>
-  <body class="main-container">
-    <header></header>
+  <body>
+    <header class="header">
+      <div class="header__wrapper wrapper">
+        <div class="header__logo-line">
+          <a href="./index.html" class="logo">
+            <img src="./src/img/logo/logo.png" class="logo__image" alt="logo" />
+          </a>
+          <nav class="header__navigation">
+            <ul class="navigation">
+              <li class="navigation__link">Favorite coffee</li>
+              <li class="navigation__link">About</li>
+              <li class="navigation__link">Mobile app</li>
+              <li class="navigation__link">Contact us</li>
+            </ul>
+          </nav>
+          <div class="header__actions">
+            <div class="theme-switch">
+              <div class="theme-switch__icon theme-switch__icon_selected"></div>
+              <div
+                class="theme-switch__icon theme-switch__icon_not-selected"
+              ></div>
+            </div>
+            <span class="hamburger">
+              <span class="hamburger__line"></span>
+            </span>
+            <div class="menu-link"></div>
+          </div>
+        </div>
+      </div>
+    </header>
     <main>
-      <div class="promo"></div>
-      <div class="slider"></div>
-      <div class="about"></div>
-      <div class="mobile-app"></div>
+      <div class="promo">
+        <div class="promo__wrapper wrapper">
+          <div class="promo__content">
+            <h1 class="promo__title">
+              Enjoy premium coffee at our charming cafe
+            </h1>
+            <p class="promo__text"></p>
+            <button class="button promo__button">Menu</button>
+          </div>
+        </div>
+      </div>
+      <div class="slider">
+        <div class="slider__wrapper wrapper">
+          <h2 class="slider__title"></h2>
+          <div class="slider__content">
+            <button class="button slider__button"></button>
+            <div class="slider__frame-wrapper">
+              <div class="slider__frame">...</div>
+              <div class="frame-indication">
+                <div
+                  class="frame-indication__element frame-indication__element_active"
+                ></div>
+                <div class="frame-indication__element"></div>
+                <div class="frame-indication__element"></div>
+              </div>
+            </div>
+            <button class="button slider__button"></button>
+          </div>
+        </div>
+      </div>
+      <div class="about">
+        <div class="about__wrapper wrapper">
+          <h2 class="about__title">
+            Resource is the perfect and cozy place where you can enjoy a variety
+            of hot beverages, relax, catch up with friends, or get some work
+            done.
+          </h2>
+          <div class="about__content layout-2-columns">
+            <img src="" alt="" />
+          </div>
+          <img src="" alt="" />
+          <img src="" alt="" />
+          <img src="" alt="" />
+        </div>
+      </div>
+      <div class="mobile-app">
+        <div class="mobile-app__wrapper wrapper">
+          <div class="mobile-app__content layout-2-columns">
+            <div class="mobile-app__text-wrapper">
+              <h3 class="mobile-app__title">
+                Download our app to start ordering
+              </h3>
+              <p class="mobile-app__text">
+                Download the Resource app today and experience the comfort of
+                ordering your favorite coffee from wherever you are
+              </p>
+              <div class="mobile-app__buttons">
+                <button class="button mobile-app__button">...</button>
+                <button class="button mobile-app__button">...</button>
+              </div>
+            </div>
+            <div class="mobile-app__picture-wrapper">
+              <img src="" alt="telephone-picture" />
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
-    <footer></footer>
+    <footer>
+      <div class="footer__wrapper wrapper">
+        <div class="footer__content layout-2-columns">
+          <div class="footer__text">
+            <h3 class="footer__title">Sip, Savor, Smile. It’s coffee time!</h3>
+            <div class="socials">
+              <button class="button socials__button">...</button>
+              <button class="button socials__button">...</button>
+              <button class="button socials__button">...</button>
+            </div>
+          </div>
+          <div class="contacts">
+            <h4 class="contacts__title">Contact us</h4>
+            <div class="contacts__content">
+              <div class="contacts__item">
+                <img class="contacts__icon" src="" alt="adress icon" />
+                <p class="contacts__text">8558 Green Rd., LA</p>
+              </div>
+              <div class="contacts__item">
+                <img class="contacts__icon" src="" alt="phone icon" />
+                <p class="contacts__text">+1 (603) 555-0123</p>
+              </div>
+              <div class="contacts__item">
+                <img class="contacts__icon" src="" alt="clock icon" />
+                <p class="contacts__text">Mon–Sat: 9:00–23:00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
