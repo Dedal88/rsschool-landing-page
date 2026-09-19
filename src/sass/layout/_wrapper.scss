@@ -1,0 +1,6 @@
+@use '../abstracts/varibles' as *;
+
+.wrapper {
+  max-width: $desktop-width;
+  margin: auto;
+}

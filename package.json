@@ -1,0 +1,20 @@
+{
+  "name": "landing-page",
+  "version": "1.0.0",
+  "description": "Coffee House site",
+  "homepage": "https://github.com/Dedal88/rsschool-landing-page#readme",
+  "bugs": {
+    "url": "https://github.com/Dedal88/rsschool-landing-page/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dedal88/rsschool-landing-page.git"
+  },
+  "license": "ISC",
+  "author": "Malkov Sergey",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "style": "sass --watch src/sass/main.scss src/style.css"
+  }
+}
