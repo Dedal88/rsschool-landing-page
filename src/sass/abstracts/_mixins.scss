@@ -15,6 +15,21 @@
   line-height: $line-height;
 }
 
+@mixin button(
+  $width: 200px,
+  $height: 64px,
+  $color: $color-background-page,
+  $border-radius: calc($height / 2),
+  $border: 1px solid $color-border-inverse
+) {
+  width: $width;
+  height: $height;
+  background-color: $color;
+  border-radius: $border-radius;
+  border: $border;
+  cursor: pointer;
+}
+
 @mixin columns($width) {
   display: flex;
   flex-wrap: wrap;

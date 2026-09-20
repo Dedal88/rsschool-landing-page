@@ -1,3 +1,47 @@
 @use '../abstracts/varibles' as *;
 @use '../abstracts/mixins' as *;
 @use '../abstracts/placeholders' as *;
+
+.promo {
+  padding-top: 25px;
+}
+
+.promo__wrapper {
+  display: flex;
+  background-image: url('./img/background/promo.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 644px;
+  padding: 100px;
+  border-radius: 40px;
+  max-width: 1360px;
+}
+
+.promo__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 530px;
+  height: 100%;
+  margin-top: 30px;
+}
+
+.promo__title {
+  color: $color-text-inverse;
+}
+
+.highlighted-word {
+  @extend %letter-italic;
+}
+
+.promo__text {
+  color: $color-text-inverse;
+  margin-top: 40px;
+}
+
+.promo__button {
+  @include button($border: none);
+  margin-top: 40px;
+  font-weight: 600;
+  color: $color-text-primary;
+}
