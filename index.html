@@ -20,29 +20,47 @@
   <body>
     <header class="header">
       <div class="header__wrapper wrapper">
-        <div class="header__logo-line">
-          <a href="./index.html" class="logo">
-            <img src="./src/img/logo/logo.png" class="logo__image" alt="logo" />
-          </a>
-          <nav class="header__navigation">
-            <ul class="navigation">
-              <li class="navigation__link">Favorite coffee</li>
-              <li class="navigation__link">About</li>
-              <li class="navigation__link">Mobile app</li>
-              <li class="navigation__link">Contact us</li>
-            </ul>
-          </nav>
-          <div class="header__actions">
-            <div class="theme-switch">
-              <div class="theme-switch__icon theme-switch__icon_selected"></div>
-              <div
-                class="theme-switch__icon theme-switch__icon_not-selected"
-              ></div>
+        <a class="logo" href="./index.html">
+          <img class="logo__image" src="./src/img/logo/logo.png" alt="logo" />
+        </a>
+        <nav class="header__navigation">
+          <ul class="navigation">
+            <li class="navigation__link"><a href="">Favorite coffee</a></li>
+            <li class="navigation__link"><a href="">About</a></li>
+            <li class="navigation__link"><a href="">Mobile app</a></li>
+            <li class="navigation__link"><a href="">Contact us</a></li>
+          </ul>
+        </nav>
+        <div class="header__actions">
+          <div class="theme-switch">
+            <div
+              class="theme-switch__icon-wrapper theme-switch__icon-wrapper_selected"
+            >
+              <img
+                class="theme-switch__icon"
+                src="./src/img/theme/Sun.svg"
+                alt="sun icon"
+              />
             </div>
-            <span class="hamburger">
-              <span class="hamburger__line"></span>
-            </span>
-            <div class="menu-link"></div>
+            <div
+              class="theme-switch__icon-wrapper theme-switch__icon-wrapper_not-selected"
+            >
+              <img
+                class="theme-switch__icon"
+                src="./src/img/theme/Moon.svg"
+                alt="moon icon"
+              />
+            </div>
+          </div>
+          <span class="hamburger">
+            <span class="hamburger__line"></span>
+          </span>
+          <div class="menu-link">
+            <img
+              class="menu-link__icon"
+              src="./src/img/menu-link/coffee-menu.svg"
+              alt="menu icon"
+            />
           </div>
         </div>
       </div>

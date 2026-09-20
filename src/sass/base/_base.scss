@@ -8,6 +8,24 @@ html {
 
 body {
   @extend %font-prim;
-  @include font($size: 1.6rem);
-  background-color: $color-background-page;
+  @include font($size: 1.6rem, $line-height: 150%);
+}
+
+h1 {
+  @include font($size: 7.2rem, $weight: 600, $line-height: 105%);
+
+  @include media-mobile {
+    @include font($size: 4.2rem, $weight: 600, $line-height: 125%);
+  }
+}
+
+h2 {
+  @include font($size: 6rem, $weight: 600, $line-height: 105%);
+  @include media-mobile {
+    @include font($size: 3.2rem, $weight: 600, $line-height: 125%);
+  }
+}
+
+h3 {
+  @include font($size: 2.4rem, $weight: 600, $line-height: 125%);
 }

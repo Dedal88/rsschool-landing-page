@@ -26,7 +26,6 @@ body {
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
 }
 
 img,
@@ -65,23 +64,74 @@ body {
   font-style: normal;
   font-weight: normal;
   color: #403f3d;
-  background-color: #e1d4c9;
+  line-height: 150%;
 }
 
-.logo {
-  display: flex;
-  width: 160px;
-  height: 40px;
-  align-items: center;
+h1 {
+  font-size: 7.2rem;
+  font-style: normal;
+  font-weight: 600;
+  color: #403f3d;
+  line-height: 105%;
+}
+@media (max-width: 380px) {
+  h1 {
+    font-size: 4.2rem;
+    font-style: normal;
+    font-weight: 600;
+    color: #403f3d;
+    line-height: 125%;
+  }
+}
+
+h2 {
+  font-size: 6rem;
+  font-style: normal;
+  font-weight: 600;
+  color: #403f3d;
+  line-height: 105%;
+}
+@media (max-width: 380px) {
+  h2 {
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 600;
+    color: #403f3d;
+    line-height: 125%;
+  }
+}
+
+h3 {
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 600;
+  color: #403f3d;
+  line-height: 125%;
 }
 
 .logo__image {
-  width: 50px;
+  width: 100px;
+  height: 60px;
+}
+
+.navigation {
+  display: flex;
+  width: 100%;
+  font-size: 1.7rem;
+  font-style: normal;
+  font-weight: 600;
+  color: #403f3d;
+  line-height: normal;
+}
+
+.navigation__link {
+  margin-right: 38px;
 }
 
 .wrapper {
   max-width: 1440px;
   margin: auto;
+  background-color: #e1d4c9;
 }
 
 .layout-2-column {
@@ -91,6 +141,59 @@ body {
 }
 .layout-2-column > * {
   flex-basis: 48%;
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px 0 40px;
+}
+
+.header__navigation {
+  display: flex;
+  justify-content: center;
+}
+
+.header__actions {
+  display: flex;
+  gap: 14px;
+}
+
+.theme-switch {
+  width: 88px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px;
+  border-radius: 44px;
+  border: 1px solid #c1b6ad;
+}
+
+.theme-switch__icon {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.theme-switch__icon-wrapper {
+  display: flex;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.theme-switch__icon-wrapper_selected {
+  background: #b0907a;
+}
+
+.menu-link {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

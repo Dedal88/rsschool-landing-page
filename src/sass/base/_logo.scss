@@ -2,13 +2,7 @@
 @use '../abstracts/placeholders' as *;
 @use '../abstracts/mixins' as *;
 
-.logo {
-  display: flex;
-  width: 160px;
-  height: 40px;
-  align-items: center;
-}
-
 .logo__image {
-  width: 50px;
+  width: 100px;
+  height: 60px;
 }

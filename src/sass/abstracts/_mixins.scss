@@ -5,12 +5,14 @@
   $size,
   $weight: normal,
   $style: normal,
-  $color: $color-text-primary
+  $color: $color-text-primary,
+  $line-height: normal
 ) {
   font-size: $size;
   font-style: $style;
   font-weight: $weight;
   color: $color;
+  line-height: $line-height;
 }
 
 @mixin columns($width) {
