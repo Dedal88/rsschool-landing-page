@@ -73,3 +73,53 @@
 .mobile-app__text-button_big {
   @include font($size: 1.6rem, $weight: 600);
 }
+
+@include media-tablet {
+  .mobile-app__wrapper {
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+
+  .mobile-app__content {
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .mobile-app__text-wrapper,
+  .mobile-app__picture-wrapper {
+    width: 100%;
+    max-width: 630px;
+  }
+
+  .mobile-app__picture-wrapper {
+    order: -1;
+  }
+}
+
+@include media-mobile {
+  .mobile-app__wrapper {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .mobile-app__content {
+    gap: 40px;
+  }
+
+  .mobile-app__title {
+    margin-bottom: 32px;
+  }
+
+  .mobile-app__text {
+    margin-bottom: 32px;
+  }
+
+  .mobile-app__buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .mobile-app__button {
+    width: 200px;
+  }
+}

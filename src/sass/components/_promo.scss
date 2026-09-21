@@ -41,3 +41,39 @@
   font-weight: 600;
   color: $color-text-primary;
 }
+
+@include media-tablet {
+  .promo__wrapper {
+    max-height: none;
+    padding: 80px;
+  }
+
+  .promo__content {
+    max-width: 530px;
+    margin-top: 0;
+  }
+}
+
+@include media-mobile {
+  .promo {
+    padding-top: 20px;
+  }
+
+  .promo__wrapper {
+    padding: 60px 16px;
+    border-radius: 20px;
+  }
+
+  .promo__content {
+    width: 100%;
+  }
+
+  .promo__text,
+  .promo__button {
+    margin-top: 32px;
+  }
+
+  .promo__button {
+    width: 100%;
+  }
+}
