@@ -83,25 +83,65 @@
           </div>
         </div>
       </div>
-      <div class="slider">
-        <div class="slider__wrapper wrapper">
-          <h2 class="slider__title"></h2>
-          <div class="slider__content">
-            <button class="button slider__button"></button>
-            <div class="slider__frame-wrapper">
-              <div class="slider__frame">...</div>
-              <div class="frame-indication">
-                <div
-                  class="frame-indication__element frame-indication__element_active"
-                ></div>
-                <div class="frame-indication__element"></div>
-                <div class="frame-indication__element"></div>
+      <section class="slider wrapper" id="favorites">
+        <h2 class="slider__title">
+          Choose your <span class="highlighted-word">favorite</span> coffee
+        </h2>
+        <div class="slider__content">
+          <button
+            class="button slider__button slider__button_prev"
+            type="button"
+            aria-label="Previous slide"
+          >
+            <img
+              class="slider__button-icon"
+              src="./src/img/slider/arrow-left.svg"
+              alt=""
+            />
+          </button>
+          <div class="slider__frame-wrapper">
+            <div class="slider__frame">
+              <img
+                class="slider__image"
+                src="./src/img/slider/coffee-slider-1.webp"
+                alt="S'mores Frappuccino"
+              />
+              <div class="slider__info">
+                <h3 class="slider__coffee-title">S&rsquo;mores Frappuccino</h3>
+                <p class="slider__coffee-description">
+                  This new drink takes an espresso and mixes it with brown
+                  sugar and cinnamon before being topped with oat milk.
+                </p>
+                <h3 class="slider__coffee-price">$5.50</h3>
               </div>
             </div>
-            <button class="button slider__button"></button>
+            <div class="frame-indication">
+              <div
+                class="frame-indication__element frame-indication__element_active"
+              >
+                <span class="frame-indication__progress"></span>
+              </div>
+              <div class="frame-indication__element">
+                <span class="frame-indication__progress"></span>
+              </div>
+              <div class="frame-indication__element">
+                <span class="frame-indication__progress"></span>
+              </div>
+            </div>
           </div>
+          <button
+            class="button slider__button slider__button_next"
+            type="button"
+            aria-label="Next slide"
+          >
+            <img
+              class="slider__button-icon"
+              src="./src/img/slider/arrow-right.svg"
+              alt=""
+            />
+          </button>
         </div>
-      </div>
+      </section>
       <div class="about">
         <div class="about__wrapper wrapper">
           <h2 class="about__title">
@@ -171,5 +211,6 @@
         </div>
       </div>
     </footer>
+    <script src="./src/index.js" defer></script>
   </body>
 </html>
