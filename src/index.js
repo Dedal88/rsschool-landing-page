@@ -128,3 +128,199 @@ function resetAllProgressBars() {
 }
 
 document.addEventListener('DOMContentLoaded', initSlider);
+
+const catalogProducts = {
+  coffee: [
+    [
+      'Espresso',
+      'Rich and concentrated coffee with a smooth crema.',
+      '$4.50',
+      'Espresso.webp',
+    ],
+    [
+      'Latte',
+      'Espresso with steamed milk and a light layer of foam.',
+      '$5.50',
+      'Latte.webp',
+    ],
+    [
+      'Ice cappuccino',
+      'A refreshing blend of espresso, milk and ice.',
+      '$5.00',
+      'Ice-cappuccino.webp',
+    ],
+    [
+      'Kahlua coffee',
+      'Espresso with Kahlua liqueur and a creamy finish.',
+      '$7.00',
+      'Kahlua-coffee.webp',
+    ],
+    [
+      'Irish coffee',
+      'Coffee with Irish whiskey, sugar and whipped cream.',
+      '$7.00',
+      'Irish-coffee.webp',
+    ],
+    [
+      'Latte macchiato',
+      'Steamed milk marked with espresso and foam.',
+      '$5.50',
+      'Latte-macchiato.webp',
+    ],
+    [
+      'Coffee with cognac',
+      'A warming coffee finished with cognac and cream.',
+      '$6.50',
+      'Coffee-with-cognac.webp',
+    ],
+    [
+      'Honey raf',
+      'Espresso blended with cream, vanilla and honey.',
+      '$5.50',
+      'Honey-raf.webp',
+    ],
+  ],
+  tea: [
+    [
+      'Moroccan',
+      'Green tea with mint and a bright, refreshing aroma.',
+      '$4.00',
+      'Moroccan.webp',
+    ],
+    [
+      'Ginger',
+      'A warming tea with ginger and a gentle citrus note.',
+      '$4.50',
+      'Ginger.webp',
+    ],
+    [
+      'Cranberry',
+      'Fragrant black tea with cranberry and a soft sweetness.',
+      '$4.00',
+      'Cranberry.webp',
+    ],
+    [
+      'Sea buckthorn',
+      'A vivid berry tea with a pleasantly tart finish.',
+      '$4.50',
+      'Sea-buckthorn.webp',
+    ],
+  ],
+  dessert: [
+    [
+      'Black forest',
+      'Chocolate sponge, cherry filling and soft cream.',
+      '$4.50',
+      'Black-forest.webp',
+    ],
+    [
+      'Cheesecakes',
+      'Tender baked cheesecake with a creamy texture.',
+      '$4.50',
+      'Cheesecakes.webp',
+    ],
+    [
+      'Honey cake',
+      'Delicate honey layers with a rich cream filling.',
+      '$4.50',
+      'Honey-cake.webp',
+    ],
+    [
+      'Creme brulee',
+      'Silky vanilla custard beneath a crisp caramel crust.',
+      '$4.00',
+      'Creme-brulee.webp',
+    ],
+    [
+      'Chocolate cake',
+      'Moist chocolate cake with a deep cocoa flavor.',
+      '$4.50',
+      'Chocolate-cake.webp',
+    ],
+    [
+      'Marble cheesecake',
+      'Classic cheesecake with a chocolate marble swirl.',
+      '$3.50',
+      'Marble-cheesecake.webp',
+    ],
+    [
+      'Pancakes',
+      'Fluffy pancakes served with a sweet topping.',
+      '$4.50',
+      'Pancakes.webp',
+    ],
+    [
+      'Red velvet',
+      'Velvety red sponge with a smooth cream topping.',
+      '$4.00',
+      'Red-velvet.webp',
+    ],
+  ],
+};
+
+const catalogGrid = document.querySelector('.catalog__grid');
+const catalogTabs = document.querySelectorAll('.catalog__tab');
+const catalogLoadMore = document.querySelector('.catalog__load-more');
+let activeCatalogCategory = 'coffee';
+
+function renderCatalog(category) {
+  if (!catalogGrid) {
+    return;
+  }
+
+  catalogGrid.innerHTML = catalogProducts[category]
+    .map(
+      ([title, description, price, image]) => `
+      <article class="catalog__card">
+        <img class="catalog__card-image" src="./src/img/catalog/${category}/${image}" alt="${title}" />
+        <div class="catalog__card-content">
+          <h2 class="catalog__card-title">${title}</h2>
+          <p class="catalog__card-description">${description}</p>
+          <p class="catalog__card-price">${price}</p>
+        </div>
+      </article>
+    `,
+    )
+    .join('');
+}
+
+function initCatalog() {
+  if (!catalogGrid) {
+    return;
+  }
+
+  renderCatalog(activeCatalogCategory);
+
+  catalogTabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      activeCatalogCategory = tab.dataset.category;
+      catalogTabs.forEach((item) => {
+        const isActive = item === tab;
+        item.classList.toggle('catalog__tab_active', isActive);
+        item.setAttribute('aria-selected', String(isActive));
+      });
+      renderCatalog(activeCatalogCategory);
+    });
+  });
+
+  catalogLoadMore?.addEventListener('click', () => {
+    catalogGrid.classList.toggle('catalog__grid_expanded');
+    catalogGrid
+      .querySelectorAll('.catalog__card:nth-child(n + 5)')
+      .forEach((card) => {
+        card.style.display = catalogGrid.classList.contains(
+          'catalog__grid_expanded',
+        )
+          ? 'flex'
+          : '';
+      });
+    catalogLoadMore.setAttribute(
+      'aria-label',
+      catalogGrid.classList.contains('catalog__grid_expanded')
+        ? 'Show fewer products'
+        : 'Load more products',
+    );
+  });
+}
+
+document.addEventListener('DOMContentLoaded', initCatalog);
