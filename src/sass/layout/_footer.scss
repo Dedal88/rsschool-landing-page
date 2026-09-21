@@ -1,3 +1,84 @@
 @use '../abstracts/varibles' as *;
 @use '../abstracts/placeholders' as *;
 @use '../abstracts/mixins' as *;
+
+.footer__content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 100px;
+  background-color: $color-background-container;
+  border-radius: 40px;
+  padding: 100px;
+}
+
+.footer__text {
+  max-width: 530px;
+}
+
+.footer__title {
+  color: $color-text-inverse;
+  margin-bottom: 40px;
+  line-height: 130%;
+}
+
+.socials {
+  display: flex;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.socials__button {
+  @include button(
+    $width: 60px,
+    $height: 60px,
+    $color: $color-background-container,
+    $border-radius: 50%,
+    $border: 1px solid $color-border-primary
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+  max-width: 530px;
+  color: $color-text-inverse;
+}
+
+.contacts__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.contacts__title {
+  @include font(
+    $size: 2.5rem,
+    $weight: 500,
+    $line-height: 125%,
+    $color: $color-text-inverse
+  );
+  margin-bottom: 20px;
+}
+
+.contacts__icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.contacts__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.footer__wrapper {
+  padding-bottom: 40px;
+}

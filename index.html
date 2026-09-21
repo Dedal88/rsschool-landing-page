@@ -16,6 +16,7 @@
       href="./src/style.css
     "
     />
+    <script src="./src/index.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -237,28 +238,52 @@
     </main>
     <footer>
       <div class="footer__wrapper wrapper">
-        <div class="footer__content layout-2-columns">
+        <div class="footer__content">
           <div class="footer__text">
-            <h3 class="footer__title">Sip, Savor, Smile. It’s coffee time!</h3>
+            <h2 class="footer__title">
+              Sip, Savor, Smile.
+              <span class="highlighted-word">It’s coffee time!</span>
+            </h2>
             <div class="socials">
-              <button class="button socials__button">...</button>
-              <button class="button socials__button">...</button>
-              <button class="button socials__button">...</button>
+              <button class="button socials__button">
+                <img src="./src/img/footer/twitter.svg" alt="Twitter icon" />
+              </button>
+              <button class="button socials__button">
+                <img
+                  src="./src/img/footer/instagram.svg"
+                  alt="Instagram icon"
+                />
+              </button>
+              <button class="button socials__button">
+                <img src="./src/img/footer/facebook.svg" alt="Facebook icon" />
+              </button>
             </div>
           </div>
           <div class="contacts">
             <h4 class="contacts__title">Contact us</h4>
             <div class="contacts__content">
               <div class="contacts__item">
-                <img class="contacts__icon" src="" alt="adress icon" />
+                <img
+                  class="contacts__icon"
+                  src="./src/img/footer/pin-alt.svg"
+                  alt="adress icon"
+                />
                 <p class="contacts__text">8558 Green Rd., LA</p>
               </div>
               <div class="contacts__item">
-                <img class="contacts__icon" src="" alt="phone icon" />
+                <img
+                  class="contacts__icon"
+                  src="./src/img/footer/phone.svg"
+                  alt="phone icon"
+                />
                 <p class="contacts__text">+1 (603) 555-0123</p>
               </div>
               <div class="contacts__item">
-                <img class="contacts__icon" src="" alt="clock icon" />
+                <img
+                  class="contacts__icon"
+                  src="./src/img/footer/clock.svg"
+                  alt="clock icon"
+                />
                 <p class="contacts__text">Mon–Sat: 9:00–23:00</p>
               </div>
             </div>
@@ -266,6 +291,5 @@
         </div>
       </div>
     </footer>
-    <script src="./src/index.js" defer></script>
   </body>
 </html>
