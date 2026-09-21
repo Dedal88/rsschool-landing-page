@@ -2,6 +2,30 @@
 @use '../abstracts/placeholders' as *;
 @use '../abstracts/mixins' as *;
 
+:root {
+  --color-text-primary: #403f3d;
+  --color-text-inverse: #e1d4c9;
+  --color-text-accent: #b0907a;
+  --color-background-page: #e1d4c9;
+  --color-background-container: #665f55;
+  --color-background-overlay: #403f3d;
+  --color-border-primary: #c1b6ad;
+  --color-border-inverse: #665f55;
+  color-scheme: light;
+}
+
+body.theme-dark {
+  --color-text-primary: #e1d4c9;
+  --color-text-inverse: #e1d4c9;
+  --color-text-accent: #b0907a;
+  --color-background-page: #292826;
+  --color-background-container: #403f3d;
+  --color-background-overlay: #292826;
+  --color-border-primary: #665f55;
+  --color-border-inverse: #c1b6ad;
+  color-scheme: dark;
+}
+
 html {
   font-size: 10px;
   scroll-behavior: smooth;
@@ -10,6 +34,9 @@ html {
 body {
   @extend %font-prim;
   @include font($size: 1.6rem, $line-height: 150%);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 h1 {

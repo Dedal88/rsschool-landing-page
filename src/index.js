@@ -1,3 +1,10 @@
+const themeStorageKey = 'coffee-house-theme';
+const savedTheme = window.localStorage.getItem(themeStorageKey);
+
+if (savedTheme === 'dark') {
+  document.body.classList.add('theme-dark');
+}
+
 const slides = [
   {
     image: './src/img/slider/coffee-slider-1.webp',
@@ -324,3 +331,44 @@ function initCatalog() {
 }
 
 document.addEventListener('DOMContentLoaded', initCatalog);
+
+const themeSwitch = document.querySelector('.theme-switch');
+const themeOptions = document.querySelectorAll('.theme-switch__icon-wrapper');
+
+function updateTheme(isDark) {
+  document.body.classList.toggle('theme-dark', isDark);
+  window.localStorage.setItem(themeStorageKey, isDark ? 'dark' : 'light');
+
+  themeOptions.forEach((option, index) => {
+    const isSelected = isDark ? index === 1 : index === 0;
+    option.classList.toggle('theme-switch__icon-wrapper_selected', isSelected);
+    option.classList.toggle(
+      'theme-switch__icon-wrapper_not-selected',
+      !isSelected,
+    );
+    option.setAttribute('aria-pressed', String(isSelected));
+  });
+}
+
+function initThemeSwitch() {
+  if (!themeSwitch) {
+    return;
+  }
+
+  const isDark = document.body.classList.contains('theme-dark');
+  updateTheme(isDark);
+
+  themeOptions.forEach((option, index) => {
+    const selectTheme = () => updateTheme(index === 1);
+
+    option.addEventListener('click', selectTheme);
+    option.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        selectTheme();
+      }
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', initThemeSwitch);
