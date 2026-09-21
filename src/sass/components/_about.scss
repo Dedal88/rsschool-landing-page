@@ -1,3 +1,36 @@
 @use '../abstracts/varibles' as *;
 @use '../abstracts/mixins' as *;
 @use '../abstracts/placeholders' as *;
+
+.about__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+}
+
+.about__title {
+  line-height: 120%;
+}
+
+.about__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 45px;
+}
+
+.about__columnPhotos {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.about__photo {
+  display: block;
+  width: 100%;
+  max-width: 660px;
+  height: auto;
+  border-radius: 20px;
+}
