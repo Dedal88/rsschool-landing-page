@@ -1,3 +1,75 @@
 @use '../abstracts/varibles' as *;
 @use '../abstracts/mixins' as *;
 @use '../abstracts/placeholders' as *;
+
+.mobile-app__wrapper {
+  padding-top: 100px;
+}
+
+.mobile-app__content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 100px;
+}
+
+.mobile-app__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 630px;
+}
+
+.mobile-app__title {
+  line-height: 120%;
+  margin-bottom: 40px;
+}
+
+.mobile-app__text {
+  margin-bottom: 40px;
+}
+
+.mobile-app__picture-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 630px;
+}
+
+.mobile-app__picture {
+  width: 100%;
+  max-width: 630px;
+  height: auto;
+}
+
+.mobile-app__buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.mobile-app__button {
+  @include button($width: 200px, $height: 64px);
+}
+
+.mobile-app__title-button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 15px;
+  gap: 8px;
+}
+
+.mobile-app__text-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.mobile-app__text-button_small {
+  @include font($size: 1rem, $weight: 600);
+}
+
+.mobile-app__text-button_big {
+  @include font($size: 1.6rem, $weight: 600);
+}
