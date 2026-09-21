@@ -1,0 +1,58 @@
+@use '../abstracts/varibles' as *;
+@use '../abstracts/placeholders' as *;
+
+@mixin font(
+  $size,
+  $weight: normal,
+  $style: normal,
+  $color: $color-text-primary,
+  $line-height: normal
+) {
+  font-size: $size;
+  font-style: $style;
+  font-weight: $weight;
+  color: $color;
+  line-height: $line-height;
+}
+
+@mixin button(
+  $width: 200px,
+  $height: 64px,
+  $color: $color-background-page,
+  $border-radius: calc($height / 2),
+  $border: 1px solid $color-border-inverse
+) {
+  width: $width;
+  height: $height;
+  background-color: $color;
+  border-radius: $border-radius;
+  border: $border;
+  cursor: pointer;
+}
+
+@mixin columns($width) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  > * {
+    flex-basis: $width;
+  }
+}
+
+@mixin media-laptop {
+  @media (max-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media (max-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin media-mobile {
+  @media (max-width: $mobile-width) {
+    @content;
+  }
+}

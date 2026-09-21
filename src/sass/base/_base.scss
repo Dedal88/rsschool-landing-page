@@ -1,0 +1,64 @@
+@use '../abstracts/varibles' as *;
+@use '../abstracts/placeholders' as *;
+@use '../abstracts/mixins' as *;
+
+:root {
+  --color-text-primary: #403f3d;
+  --color-text-inverse: #e1d4c9;
+  --color-text-accent: #b0907a;
+  --color-background-page: #e1d4c9;
+  --color-background-container: #665f55;
+  --color-background-overlay: #403f3d;
+  --color-border-primary: #c1b6ad;
+  --color-border-inverse: #665f55;
+  color-scheme: light;
+}
+
+body.theme-dark {
+  --color-text-primary: #e1d4c9;
+  --color-text-inverse: #e1d4c9;
+  --color-text-accent: #b0907a;
+  --color-background-page: #292826;
+  --color-background-container: #403f3d;
+  --color-background-overlay: #292826;
+  --color-border-primary: #665f55;
+  --color-border-inverse: #c1b6ad;
+  color-scheme: dark;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  @extend %font-prim;
+  @include font($size: 1.6rem, $line-height: 150%);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+h1 {
+  @include font($size: 7.2rem, $weight: 600, $line-height: 105%);
+
+  @include media-mobile {
+    @include font($size: 4.2rem, $weight: 600, $line-height: 125%);
+  }
+}
+
+h2 {
+  @include font($size: 6rem, $weight: 600, $line-height: 105%);
+  @include media-mobile {
+    @include font($size: 3.2rem, $weight: 600, $line-height: 125%);
+  }
+}
+
+h3 {
+  @include font($size: 2.4rem, $weight: 600, $line-height: 125%);
+}
+
+.highlighted-word {
+  font-style: italic;
+  color: $color-text-accent;
+}

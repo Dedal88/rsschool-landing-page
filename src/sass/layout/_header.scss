@@ -1,0 +1,73 @@
+@use '../abstracts/placeholders' as *;
+@use '../abstracts/varibles' as *;
+@use '../abstracts/mixins' as *;
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px 0 40px;
+}
+
+.header__navigation {
+  display: flex;
+  justify-content: center;
+}
+
+.header__actions {
+  display: flex;
+  gap: 14px;
+}
+
+.theme-switch {
+  width: 88px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px;
+  border-radius: 44px;
+  border: 1px solid $color-border-primary;
+}
+
+.theme-switch__icon {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.theme-switch__icon-wrapper {
+  display: flex;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.theme-switch__icon-wrapper_selected {
+  background: $color-text-accent;
+}
+
+.theme-switch__icon-wrapper {
+  cursor: pointer;
+}
+
+.theme-switch__icon-wrapper_not-selected {
+  opacity: 0.55;
+}
+
+.theme-switch__icon-wrapper_selected .theme-switch__icon {
+  opacity: 1;
+}
+
+.menu-link {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.menu-link a {
+  display: flex;
+  align-items: center;
+}

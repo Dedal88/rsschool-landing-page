@@ -1,0 +1,8 @@
+@use '../abstracts/varibles' as *;
+
+.wrapper {
+  max-width: $desktop-width;
+  margin: auto;
+  background-color: $color-background-page;
+  padding: 0 40px;
+}
