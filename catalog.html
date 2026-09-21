@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee House catalog</title>
+    <link rel="icon" href="./src/img/logo/logo.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./src/style.css
+    "
+    />
+    <script src="./src/index.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__wrapper wrapper">
+        <a class="logo" href="./index.html">
+          <img class="logo__image" src="./src/img/logo/logo.png" alt="logo" />
+        </a>
+        <nav class="header__navigation">
+          <ul class="navigation">
+            <li class="navigation__link"><a href="">Favorite coffee</a></li>
+            <li class="navigation__link"><a href="">About</a></li>
+            <li class="navigation__link"><a href="">Mobile app</a></li>
+            <li class="navigation__link"><a href="">Contact us</a></li>
+          </ul>
+        </nav>
+        <div class="header__actions">
+          <div class="theme-switch">
+            <div
+              class="theme-switch__icon-wrapper theme-switch__icon-wrapper_selected"
+            >
+              <img
+                class="theme-switch__icon"
+                src="./src/img/theme/Sun.svg"
+                alt="sun icon"
+              />
+            </div>
+            <div
+              class="theme-switch__icon-wrapper theme-switch__icon-wrapper_not-selected"
+            >
+              <img
+                class="theme-switch__icon"
+                src="./src/img/theme/Moon.svg"
+                alt="moon icon"
+              />
+            </div>
+          </div>
+          <span class="hamburger">
+            <span class="hamburger__line"></span>
+          </span>
+          <div class="menu-link">
+            <a href="./catalog.html">
+              <img
+                class="menu-link__icon"
+                src="./src/img/menu-link/coffee-menu.svg"
+                alt="menu icon"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main></main>
+    <footer>
+      <div class="footer__wrapper wrapper">
+        <div class="footer__content">
+          <div class="footer__text">
+            <h2 class="footer__title">
+              Sip, Savor, Smile.
+              <span class="highlighted-word">It’s coffee time!</span>
+            </h2>
+            <div class="socials">
+              <button class="button socials__button">
+                <img src="./src/img/footer/twitter.svg" alt="Twitter icon" />
+              </button>
+              <button class="button socials__button">
+                <img
+                  src="./src/img/footer/instagram.svg"
+                  alt="Instagram icon"
+                />
+              </button>
+              <button class="button socials__button">
+                <img src="./src/img/footer/facebook.svg" alt="Facebook icon" />
+              </button>
+            </div>
+          </div>
+          <div class="contacts">
+            <h4 class="contacts__title">Contact us</h4>
+            <div class="contacts__content">
+              <div class="contacts__item">
+                <img
+                  class="contacts__icon"
+                  src="./src/img/footer/pin-alt.svg"
+                  alt="adress icon"
+                />
+                <p class="contacts__text">8558 Green Rd., LA</p>
+              </div>
+              <div class="contacts__item">
+                <img
+                  class="contacts__icon"
+                  src="./src/img/footer/phone.svg"
+                  alt="phone icon"
+                />
+                <p class="contacts__text">+1 (603) 555-0123</p>
+              </div>
+              <div class="contacts__item">
+                <img
+                  class="contacts__icon"
+                  src="./src/img/footer/clock.svg"
+                  alt="clock icon"
+                />
+                <p class="contacts__text">Mon–Sat: 9:00–23:00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
