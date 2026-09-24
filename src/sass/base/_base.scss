@@ -34,6 +34,7 @@ html {
 body {
   @extend %font-prim;
   @include font($size: 1.6rem, $line-height: 150%);
+  background-color: var(--color-background-page);
   transition:
     background-color 0.3s ease,
     color 0.3s ease;

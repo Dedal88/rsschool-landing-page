@@ -94,6 +94,7 @@ body {
   font-weight: normal;
   color: var(--color-text-primary);
   line-height: 150%;
+  background-color: var(--color-background-page);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
