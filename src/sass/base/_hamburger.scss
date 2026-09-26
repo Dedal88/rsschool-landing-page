@@ -1,3 +1,54 @@
 @use '../abstracts/varibles' as *;
 @use '../abstracts/placeholders' as *;
 @use '../abstracts/mixins' as *;
+
+.hamburger {
+  display: none;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  color: $color-text-primary;
+  background: transparent;
+  border: 1px solid $color-border-primary;
+  border-radius: 50%;
+  cursor: pointer;
+  @extend %transition;
+}
+
+.hamburger__line {
+  position: absolute;
+  width: 18px;
+  height: 2px;
+  background-color: currentColor;
+  transition:
+    transform 0.3s ease-out,
+    top 0.3s ease-out;
+}
+
+.hamburger__line:first-child {
+  top: 16px;
+}
+
+.hamburger__line:last-child {
+  top: 24px;
+}
+
+.header_open .hamburger__line:first-child {
+  top: 20px;
+  transform: rotate(45deg);
+}
+
+.header_open .hamburger__line:last-child {
+  top: 20px;
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    flex-shrink: 0;
+  }
+}

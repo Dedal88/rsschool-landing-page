@@ -24,7 +24,7 @@
         <a class="logo" href="./index.html" aria-label="Coffee House">
           <span class="logo__image" ></span>
         </a>
-        <nav class="header__navigation">
+        <nav class="header__navigation" id="primary-navigation">
           <ul class="navigation">
             <li class="navigation__link">
               <a  href="#favorites">Favorite coffee</a>
@@ -37,6 +37,11 @@
               <a href="#contact-us">Contact us</a>
             </li>
           </ul>
+          <div class="menu-link">
+            <a class="menu-link__link" href="./catalog.html" aria-label="Menu">
+              <span class="menu-link__icon" aria-hidden="true"></span>
+            </a>
+          </div>
         </nav>
         <div class="header__actions">
           <div class="theme-switch">
@@ -67,11 +72,16 @@
               />
             </div>
           </div>
-          <div class="menu-link">
-            <a class="menu-link__link" href="./catalog.html" aria-label="Menu">
-              <span class="menu-link__icon" ></span>
-            </a>
-          </div>
+          <button
+            class="hamburger"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-controls="primary-navigation"
+            aria-expanded="false"
+          >
+            <span class="hamburger__line"></span>
+            <span class="hamburger__line"></span>
+          </button>
         </div>
       </div>
     </header>

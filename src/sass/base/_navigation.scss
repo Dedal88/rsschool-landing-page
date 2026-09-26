@@ -4,7 +4,8 @@
 
 .navigation {
   display: flex;
-  width: 100%;
+  width: auto;
+  justify-content: center;
   @include font($size: 1.7rem, $weight: 600);
 }
 

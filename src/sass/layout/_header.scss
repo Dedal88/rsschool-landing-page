@@ -3,6 +3,7 @@
 @use '../abstracts/mixins' as *;
 
 .header__wrapper {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -10,8 +11,13 @@
 }
 
 .header__navigation {
+  position: absolute;
+  left: 50%;
   display: flex;
+  align-items: center;
   justify-content: center;
+  width: max-content;
+  transform: translateX(-50%);
 }
 
 .header__actions {
@@ -70,6 +76,11 @@
 
 .navigation__link {
   @extend %smooth-underline;
+  white-space: nowrap;
+}
+
+.navigation__link:last-child {
+  margin-right: 0;
 }
 
 .menu-link__link {
@@ -77,6 +88,10 @@
   align-items: center;
   height: 20px;
   @extend %smooth-underline;
+}
+
+.menu-link {
+  flex-shrink: 0;
 }
 
 .menu-link__icon {
@@ -89,4 +104,82 @@
 
 body.theme-dark .menu-link__icon {
   background-image: url('./img/menu-link/coffee-menu-dark.svg');
+}
+
+@media (min-width: 769px) and (max-width: 900px) {
+  .header__wrapper {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .header__navigation {
+    margin-left: 0;
+  }
+
+  .navigation__link {
+    margin-right: 8px;
+  }
+
+  .navigation__link:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 800px) {
+  .navigation {
+    font-size: 1.6rem;
+  }
+
+  .navigation__link {
+    margin-right: 4px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__wrapper {
+    position: relative;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .header__navigation {
+    position: absolute;
+    z-index: 10;
+    top: calc(100% + 12px);
+    right: 20px;
+    left: 20px;
+    display: none;
+    width: auto;
+    margin-left: 0;
+    flex-direction: column;
+    gap: 32px;
+    padding: 32px 24px;
+    background-color: $color-background-page;
+    border: 1px solid $color-border-primary;
+    border-radius: 20px;
+    transform: none;
+  }
+
+  .header_open .header__navigation {
+    display: flex;
+  }
+
+  .navigation {
+    width: auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .navigation__link {
+    margin-right: 0;
+  }
+
+  .menu-link {
+    display: none;
+  }
+
+  .header_open .menu-link {
+    display: flex;
+  }
 }
