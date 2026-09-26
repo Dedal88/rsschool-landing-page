@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee House catalog</title>
+    <link rel="icon" href="./src/img/logo/logo.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./src/style.css
+    "
+    />
+    <script src="./src/index.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__wrapper wrapper">
+        <a class="logo" href="./index.html">
+          <span class="logo__image"></span>
+        </a>
+        <nav class="header__navigation">
+          <ul class="navigation">
+            <li class="navigation__link">
+              <a href="index.html#favorites">Favorite coffee</a>
+            </li>
+            <li class="navigation__link">
+              <a href="index.html#about">About</a>
+            </li>
+            <li class="navigation__link">
+              <a href="index.html#mobile-app">Mobile app</a>
+            </li>
+            <li class="navigation__link">
+              <a href="#contact-us">Contact us</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__actions">
+          <div class="theme-switch">
+            <div
+              class="theme-switch__icon-wrapper theme-switch__icon-wrapper_selected"
+              role="button"
+              tabindex="0"
+              aria-label="Use light theme"
+              aria-pressed="true"
+            >
+              <img
+                class="theme-switch__icon"
+                src="./src/img/theme/Sun.svg"
+                alt="sun icon"
+              />
+            </div>
+            <div
+              class="theme-switch__icon-wrapper theme-switch__icon-wrapper_not-selected"
+              role="button"
+              tabindex="0"
+              aria-label="Use dark theme"
+              aria-pressed="false"
+            >
+              <img
+                class="theme-switch__icon"
+                src="./src/img/theme/Moon.svg"
+                alt="moon icon"
+              />
+            </div>
+          </div>
+          <div class="menu-link">
+            <a class="menu-link__link" href="./catalog.html">
+              <span class="menu-link__icon"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="catalog wrapper">
+        <h1 class="catalog__title">
+          Behind each of our cups hides an
+          <span class="highlighted-word">amazing surprise</span>
+        </h1>
+        <div
+          class="catalog__tabs"
+          role="tablist"
+          aria-label="Product categories"
+        >
+          <button
+            class="catalog__tab catalog__tab_active"
+            type="button"
+            data-category="coffee"
+            role="tab"
+            aria-selected="true"
+          >
+            <span class="catalog__tab-icon"
+              ><img src="./src/img/catalog/icons/coffee-icon.png" alt=""
+            /></span>
+            <span>Coffee</span>
+          </button>
+          <button
+            class="catalog__tab"
+            type="button"
+            data-category="tea"
+            role="tab"
+            aria-selected="false"
+          >
+            <span class="catalog__tab-icon"
+              ><img src="./src/img/catalog/icons/tea-icon.png" alt=""
+            /></span>
+            <span>Tea</span>
+          </button>
+          <button
+            class="catalog__tab"
+            type="button"
+            data-category="dessert"
+            role="tab"
+            aria-selected="false"
+          >
+            <span class="catalog__tab-icon"
+              ><img src="./src/img/catalog/icons/dessert-icon.png" alt=""
+            /></span>
+            <span>Dessert</span>
+          </button>
+        </div>
+        <div class="catalog__grid" aria-live="polite"></div>
+        <button
+          class="catalog__load-more"
+          type="button"
+          aria-label="Load more products"
+        ></button>
+      </section>
+    </main>
+    <footer>
+      <div class="footer__wrapper wrapper" id="contact-us">
+        <div class="footer__content">
+          <div class="footer__text">
+            <h2 class="footer__title">
+              Sip, Savor, Smile.
+              <span class="highlighted-word">It’s coffee time!</span>
+            </h2>
+            <div class="socials">
+              <button class="button socials__button">
+                <img
+                  class="socials__icon"
+                  src="./src/img/footer/twitter.svg"
+                  alt="Twitter icon"
+                />
+              </button>
+              <button class="button socials__button">
+                <img
+                  class="socials__icon"
+                  src="./src/img/footer/instagram.svg"
+                  alt="Instagram icon"
+                />
+              </button>
+              <button class="button socials__button">
+                <img
+                  class="socials__icon"
+                  src="./src/img/footer/facebook.svg"
+                  alt="Facebook icon"
+                />
+              </button>
+            </div>
+          </div>
+          <div class="contacts">
+            <h4 class="contacts__title">Contact us</h4>
+            <div class="contacts__content">
+              <div class="contacts__item">
+                <img
+                  class="contacts__icon"
+                  src="./src/img/footer/pin-alt.svg"
+                  alt="adress icon"
+                />
+                <a
+                  class="contacts__link"
+                  href="https://maps.google.com/?q=8558+Green+Rd,+LA"
+                  target="_blank"
+                >
+                  <p class="contacts__text">8558 Green Rd., LA</p>
+                </a>
+              </div>
+              <div class="contacts__item">
+                <img
+                  class="contacts__icon"
+                  src="./src/img/footer/phone.svg"
+                  alt="phone icon"
+                />
+                <a class="contacts__link" href="tel:+16035550123">
+                  <p class="contacts__text">+1 (603) 555-0123</p>
+                </a>
+              </div>
+              <div class="contacts__item">
+                <img
+                  class="contacts__icon"
+                  src="./src/img/footer/clock.svg"
+                  alt="clock icon"
+                />
+                <p class="contacts__text">Mon–Sat: 9:00–23:00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

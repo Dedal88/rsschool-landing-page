@@ -1,0 +1,110 @@
+@use '../abstracts/varibles' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/placeholders' as *;
+
+.promo {
+  padding-top: 25px;
+}
+
+.promo__wrapper {
+  display: flex;
+  background-image: url('./img/background/promo.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 644px;
+  padding: 100px;
+  border-radius: 40px;
+  max-width: 1360px;
+}
+
+.promo__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 530px;
+  height: 100%;
+  margin-top: 30px;
+}
+
+.promo__title {
+  color: $color-text-inverse;
+}
+
+.promo__text {
+  color: $color-text-inverse;
+  margin-top: 40px;
+}
+
+.promo__button {
+  @include button($border: none);
+  margin-top: 40px;
+  font-weight: 600;
+  color: $color-text-primary;
+  @extend %transition;
+}
+
+.promo__button-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.promo__button-icon {
+  display: block;
+  width: 0;
+  height: 20px;
+  margin-left: 0;
+  opacity: 0;
+  background: url('./img/promo/coffee-cup-light.svg') center / contain no-repeat;
+  @extend %transition;
+}
+
+body.theme-dark .promo__button-icon {
+  background-image: url('./img/promo/coffee-cup-dark.svg');
+}
+
+@media (hover: hover) {
+  .promo__button:hover {
+    .promo__button-icon {
+      width: 20px;
+      margin-left: 8px;
+      opacity: 1;
+    }
+  }
+}
+
+@include media-tablet {
+  .promo__wrapper {
+    max-height: none;
+    padding: 80px;
+  }
+
+  .promo__content {
+    max-width: 530px;
+    margin-top: 0;
+  }
+}
+
+@include media-mobile {
+  .promo {
+    padding-top: 20px;
+  }
+
+  .promo__wrapper {
+    padding: 60px 16px;
+    border-radius: 20px;
+  }
+
+  .promo__content {
+    width: 100%;
+  }
+
+  .promo__text,
+  .promo__button {
+    margin-top: 32px;
+  }
+
+  .promo__button {
+    width: 100%;
+  }
+}

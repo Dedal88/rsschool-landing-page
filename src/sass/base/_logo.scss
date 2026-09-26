@@ -1,0 +1,14 @@
+@use '../abstracts/varibles' as *;
+@use '../abstracts/placeholders' as *;
+@use '../abstracts/mixins' as *;
+
+.logo__image {
+  display: block;
+  width: 100px;
+  height: 60px;
+  background: url('./img/logo/logo-light.svg') center / contain no-repeat;
+}
+
+body.theme-dark .logo__image {
+  background-image: url('./img/logo/logo-dark.svg');
+}

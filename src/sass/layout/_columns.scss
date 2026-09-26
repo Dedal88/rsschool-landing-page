@@ -1,0 +1,5 @@
+@use '../abstracts/mixins' as *;
+
+.layout-2-column {
+  @include columns($width: 48%);
+}
