@@ -39,6 +39,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  @extend %transition;
+}
+
+@media (hover: hover) {
+  .socials__button:hover {
+    background-color: $color-background-page;
+  }
+}
+
+@media (hover: hover) {
+  body:not(.theme-dark) .socials__button:hover {
+    background-color: $color-background-page;
+    .socials__icon {
+      filter: brightness(0);
+    }
+  }
 }
 
 .contacts {
@@ -77,6 +93,10 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+
+.contacts__link {
+  @extend %smooth-underline;
 }
 
 .footer__wrapper {

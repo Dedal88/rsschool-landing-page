@@ -22,7 +22,7 @@
     <header class="header">
       <div class="header__wrapper wrapper">
         <a class="logo" href="./index.html">
-          <img class="logo__image" src="./src/img/logo/logo.png" alt="logo" />
+          <span class="logo__image"></span>
         </a>
         <nav class="header__navigation">
           <ul class="navigation">
@@ -70,12 +70,8 @@
             </div>
           </div>
           <div class="menu-link">
-            <a href="./catalog.html">
-              <img
-                class="menu-link__icon"
-                src="./src/img/menu-link/coffee-menu.svg"
-                alt="menu icon"
-              />
+            <a class="menu-link__link" href="./catalog.html">
+              <span class="menu-link__icon"></span>
             </a>
           </div>
         </div>
@@ -137,8 +133,8 @@
         ></button>
       </section>
     </main>
-    <footer id="contact-us">
-      <div class="footer__wrapper wrapper">
+    <footer>
+      <div class="footer__wrapper wrapper" id="contact-us">
         <div class="footer__content">
           <div class="footer__text">
             <h2 class="footer__title">
@@ -147,16 +143,25 @@
             </h2>
             <div class="socials">
               <button class="button socials__button">
-                <img src="./src/img/footer/twitter.svg" alt="Twitter icon" />
+                <img
+                  class="socials__icon"
+                  src="./src/img/footer/twitter.svg"
+                  alt="Twitter icon"
+                />
               </button>
               <button class="button socials__button">
                 <img
+                  class="socials__icon"
                   src="./src/img/footer/instagram.svg"
                   alt="Instagram icon"
                 />
               </button>
               <button class="button socials__button">
-                <img src="./src/img/footer/facebook.svg" alt="Facebook icon" />
+                <img
+                  class="socials__icon"
+                  src="./src/img/footer/facebook.svg"
+                  alt="Facebook icon"
+                />
               </button>
             </div>
           </div>
@@ -169,7 +174,13 @@
                   src="./src/img/footer/pin-alt.svg"
                   alt="adress icon"
                 />
-                <p class="contacts__text">8558 Green Rd., LA</p>
+                <a
+                  class="contacts__link"
+                  href="https://maps.google.com/?q=8558+Green+Rd,+LA"
+                  target="_blank"
+                >
+                  <p class="contacts__text">8558 Green Rd., LA</p>
+                </a>
               </div>
               <div class="contacts__item">
                 <img
@@ -177,7 +188,9 @@
                   src="./src/img/footer/phone.svg"
                   alt="phone icon"
                 />
-                <p class="contacts__text">+1 (603) 555-0123</p>
+                <a class="contacts__link" href="tel:+16035550123">
+                  <p class="contacts__text">+1 (603) 555-0123</p>
+                </a>
               </div>
               <div class="contacts__item">
                 <img

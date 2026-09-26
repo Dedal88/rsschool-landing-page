@@ -49,6 +49,7 @@
 
 .mobile-app__button {
   @include button($width: 200px, $height: 64px);
+  @extend %transition;
 }
 
 .mobile-app__title-button {
@@ -57,6 +58,16 @@
   align-items: center;
   padding-left: 15px;
   gap: 8px;
+}
+
+@media (hover: hover) {
+  .mobile-app__button:hover {
+    background-color: $color-background-container;
+    border-color: $color-background-container;
+    .mobile-app__title-button {
+      filter: brightness(0) invert(0.88);
+    }
+  }
 }
 
 .mobile-app__text-button {

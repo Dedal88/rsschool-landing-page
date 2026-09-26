@@ -64,10 +64,29 @@
 .menu-link {
   display: flex;
   justify-content: center;
+  align-items: center;
   cursor: pointer;
 }
 
-.menu-link a {
+.navigation__link {
+  @extend %smooth-underline;
+}
+
+.menu-link__link {
   display: flex;
   align-items: center;
+  height: 20px;
+  @extend %smooth-underline;
+}
+
+.menu-link__icon {
+  display: block;
+  width: 72px;
+  height: 28px;
+  background: url('./img/menu-link/coffee-menu-light.svg') center / contain
+    no-repeat;
+}
+
+body.theme-dark .menu-link__icon {
+  background-image: url('./img/menu-link/coffee-menu-dark.svg');
 }
